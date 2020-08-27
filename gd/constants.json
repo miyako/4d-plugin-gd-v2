@@ -1,0 +1,62 @@
+{
+    "themes": [
+        {
+            "theme": "Image Filters",
+            "constants": [
+                {
+                    "name": "IMG_FILTER_NEGATE",
+                    "value": "1:L"
+                },
+                {
+                    "name": "IMG_FILTER_GRAYSCALE",
+                    "value": "2:L"
+                },
+                {
+                    "name": "IMG_FILTER_EDGEDETECT",
+                    "value": "3:L"
+                },
+                {
+                    "name": "IMG_FILTER_EMBOSS",
+                    "value": "4:L"
+                },
+                {
+                    "name": "IMG_FILTER_GAUSSIAN_BLUR",
+                    "value": "5:L"
+                },
+                {
+                    "name": "IMG_FILTER_SELECTIVE_BLUR",
+                    "value": "6:L"
+                },
+                {
+                    "name": "IMG_FILTER_MEAN_REMOVAL",
+                    "value": "7:L"
+                },
+                {
+                    "name": "IMG_FILTER_SMOOTH",
+                    "value": "8:L"
+                },
+                {
+                    "name": "IMG_FILTER_CONTRAST",
+                    "value": "9:L"
+                },
+                {
+                    "name": "IMG_FILTER_BRIGHTNESS",
+                    "value": "10:L"
+                },
+                {
+                    "name": "IMG_FILTER_SCATTER",
+                    "value": "11:L"
+                },
+                {
+                    "name": "IMG_FILTER_PIXELATE",
+                    "value": "12:L"
+                },
+                {
+                    "name": "IMG_FILTER_COLORIZE",
+                    "value": "13:L"
+                }
+                
+            ]
+        }
+    ]
+}

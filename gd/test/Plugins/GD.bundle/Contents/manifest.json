@@ -1,0 +1,21 @@
+{
+    "name": "GD",
+    "id": 20000,
+    "commands": [
+        {
+            "theme": "GD",
+            "syntax": "GD Filter(&P;&C):J",
+            "threadSafe": true
+        },
+        {
+            "theme": "GD",
+            "syntax": "GD Animate(&C;&L):J",
+            "threadSafe": true
+        },
+        {
+            "theme": "GD",
+            "syntax": "GD Rotate(&P;&C;&J):J",
+            "threadSafe": true
+        }
+    ]
+}
