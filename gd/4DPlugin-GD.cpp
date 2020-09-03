@@ -445,51 +445,77 @@ void GD_Rotate(PA_PluginParameters params) {
                 
                 for(PA_long32 i = 0; i < countAngles; ++i) {
                     PA_Variable v = PA_GetCollectionElement(angles, i);
-                    if(PA_GetVariableKind(v) == eVK_Real) {
+                    if(PA_GetVariableKind(v) == eVK_Object) {
                         
-                        int angle = (int)PA_GetRealVariable(v);
+                        PA_ObjectRef o = PA_GetObjectVariable(v);
                         
-                        gdImagePtr gd_out = gdImageCreateTrueColor(gdImageSX(gd_in), gdImageSY(gd_in));
+                        double angle = 0.0f;
+                        int sx = 0L;
+                        int sy = 0L;
                         
-                        if(gd_out)
-                        {
+                        if(o) {
 
-                            if(withFill) {
-                                gdImageAlphaBlending(gd_out, 0);
-                                gdImageFill(gd_out, 0, 0, gdImageColorAllocateAlpha(gd_out, red, green, blue, alpha));
-                                gdImageSaveAlpha(gd_out, 1);
-                            }else{
-                                /* make background transparent */
-                                gdImageAlphaBlending(gd_out, 0);
-                                /* probably better to default as white transparent than black transparent */
-                                gdImageFill(gd_out, 0, 0, gdImageColorAllocateAlpha(gd_out, 255, 255, 255, 255));
-                                gdImageSaveAlpha(gd_out, 1);
+                            if(ob_is_defined(o, L"angle")) {
+                                angle = ob_get_n(o, L"angle");
                             }
+                            
+                            double radian = angle * M_PI / 180.0;
+                            
+                            if(ob_is_defined(o, L"width")) {
+                                sx = ob_get_n(o, L"width");
+                            }
+                            
+                            if(ob_is_defined(o, L"height")) {
+                                sy = ob_get_n(o, L"height");
+                            }
+                            
+                            if((!sx) && (!sy)) {
+                                sx = abs(gdImageSX(gd_in) * cos(radian)) + abs(gdImageSY(gd_in) * sin(radian));
+                                sy = abs(gdImageSX(gd_in) * sin(radian)) + abs(gdImageSY(gd_in) * cos(radian));
+                            }
+                            
+                            gdImagePtr gd_out = gdImageCreateTrueColor(sx, sy);
+                            
+                            if(gd_out)
+                            {
 
-                            gdImageCopyRotated(gd_out, gd_in,
-                                               gdImageSX(gd_out)/2, // dstX
-                                               gdImageSY(gd_out)/2, // dstY
-                                               0, // srcX
-                                               0, // srcY
-                                               gdImageSX(gd_in), // srcWidth
-                                               gdImageSY(gd_in), // srcHeight
-                                               angle);
+                                if(withFill) {
+                                    gdImageAlphaBlending(gd_out, 0);
+                                    gdImageFill(gd_out, 0, 0, gdImageColorAllocateAlpha(gd_out, red, green, blue, alpha));
+                                    gdImageSaveAlpha(gd_out, 1);
+                                }else{
+                                    /* make background transparent */
+                                    gdImageAlphaBlending(gd_out, 0);
+                                    /* probably better to default as white transparent than black transparent */
+                                    gdImageFill(gd_out, 0, 0, gdImageColorAllocateAlpha(gd_out, 255, 255, 255, 255));
+                                    gdImageSaveAlpha(gd_out, 1);
+                                }
 
-                            PA_ObjectRef status = PA_CreateObject();
-                            
-                            int len = 0;
-                            void *bytes = NULL;
-                            bytes = gdImagePngPtr(gd_out, &len);
-                            PA_Picture picture = PA_CreatePicture((void *)bytes, len);
-                            ob_set_p(status, L"image", picture);
-                            ob_set_n(status, L"angle", angle);
-                            
-                            PA_Variable v = PA_CreateVariable(eVK_Object);
-                            PA_SetObjectVariable(&v, status);
-                            PA_SetCollectionElement(statuses, PA_GetCollectionLength(statuses), v);
-                            PA_ClearVariable(&v);
-                            
-                            gdImageDestroy(gd_out);
+                                gdImageCopyRotated(gd_out, gd_in,
+                                                   gdImageSX(gd_out)/2, // dstX
+                                                   gdImageSY(gd_out)/2, // dstY
+                                                   0, // srcX
+                                                   0, // srcY
+                                                   gdImageSX(gd_in), // srcWidth
+                                                   gdImageSY(gd_in), // srcHeight
+                                                   angle);
+
+                                PA_ObjectRef status = PA_CreateObject();
+                                
+                                int len = 0;
+                                void *bytes = NULL;
+                                bytes = gdImagePngPtr(gd_out, &len);
+                                PA_Picture picture = PA_CreatePicture((void *)bytes, len);
+                                ob_set_p(status, L"image", picture);
+                                ob_set_n(status, L"angle", angle);
+                                
+                                PA_Variable v = PA_CreateVariable(eVK_Object);
+                                PA_SetObjectVariable(&v, status);
+                                PA_SetCollectionElement(statuses, PA_GetCollectionLength(statuses), v);
+                                PA_ClearVariable(&v);
+                                
+                                gdImageDestroy(gd_out);
+                            }
                         }
                     }
                 }
