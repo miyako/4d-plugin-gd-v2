@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created by 4D Developer on:Mon, 15 Nov 2021 04:36:17 GMT-->
+<ErrorList>
+	<Method name="TEST_rotate">
+		<Error line="5">変数“$IMAGE”のタイプは Object から ピクチャー に変更できません。</Error>
+		<Error line="7">変数“$IMAGE”のタイプは Object から ピクチャー に変更できません。</Error>
+		<Error line="18">変数“$IMAGE”のタイプは Object から ピクチャー に変更できません。</Error>
+		<Error line="7">$IMAGE はパラメーターとしてそのメソッドに渡せません。</Error>
+		<Error line="18">$IMAGE はパラメーターとしてそのメソッドに渡せません。</Error>
+	</Method>
+</ErrorList>

@@ -1,4 +1,4 @@
-﻿{
+{
 	"Sources/DatabaseMethods/onStartup.4dm": {
 		"left": 322,
 		"top": 651,
@@ -174,15 +174,21 @@
 		"height": 616
 	},
 	"Sources/Methods/TEST_rotate.4dm": {
-		"left": 429,
-		"top": 299,
-		"width": 1042,
-		"height": 590
+		"left": 627,
+		"top": 129,
+		"width": 894,
+		"height": 739
 	},
 	"Sources/Methods/TEST_animate.4dm": {
-		"left": 551,
-		"top": 483,
+		"left": 352,
+		"top": 360,
 		"width": 1042,
 		"height": 616
+	},
+	"Sources/Methods/TEST_animate1.4dm": {
+		"left": 208,
+		"top": 454,
+		"width": 833,
+		"height": 555
 	}
 }

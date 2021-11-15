@@ -1,1 +1,9 @@
-﻿[]
+[
+	{
+		"line": 27,
+		"method": {
+			"type": 1,
+			"methodName": "TEST_animate1"
+		}
+	}
+]

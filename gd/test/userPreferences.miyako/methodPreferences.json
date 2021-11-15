@@ -1,4 +1,4 @@
-﻿{
+{
 	"Sources/Methods/generate_project_xcode.4dm": {
 		"startSelection": 0,
 		"endSelection": 0,
@@ -216,13 +216,13 @@
 		"stamp": "2020-08-27T05:38:57.466Z"
 	},
 	"Sources/Methods/TEST_rotate.4dm": {
-		"startSelection": 93,
-		"endSelection": 93,
-		"firstSelectedLine": 15,
-		"lastSelectedLine": 15,
+		"startSelection": 10,
+		"endSelection": 16,
+		"firstSelectedLine": 24,
+		"lastSelectedLine": 24,
 		"folding": [],
 		"bookmarks": [],
-		"stamp": "2020-09-03T12:49:46.587Z"
+		"stamp": "2021-11-15T04:37:37.254Z"
 	},
 	"Sources/Methods/TEST_animate.4dm": {
 		"startSelection": 0,
@@ -232,5 +232,14 @@
 		"folding": [],
 		"bookmarks": [],
 		"stamp": "2020-08-27T07:15:35.000Z"
+	},
+	"Sources/Methods/TEST_animate1.4dm": {
+		"startSelection": 38,
+		"endSelection": 38,
+		"firstSelectedLine": 17,
+		"lastSelectedLine": 17,
+		"folding": [],
+		"bookmarks": [],
+		"stamp": "2020-09-28T01:38:07.103Z"
 	}
 }
