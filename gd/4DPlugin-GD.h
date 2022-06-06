@@ -25,7 +25,7 @@ void GD_Animate(PA_PluginParameters params);
 void GD_Rotate(PA_PluginParameters params);
 
 #define gdLoopInfinite 0
-#define CMD_CONVERT_PICTURE 1002
+#define CONVERT_PICTURE  (1002)
 #define kcpRetainOnly 1
 
 typedef enum {

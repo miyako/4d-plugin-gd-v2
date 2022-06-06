@@ -3,13 +3,20 @@
 		{
 			"type": "method",
 			"id": 2147483640,
+			"previousTabType": "method",
+			"previousTabID": 2147483635,
 			"codeDescriptor": {
 				"type": 1,
 				"methodName": "TEST_rotate"
 			}
 		},
 		{
-			"type": "explorer"
+			"type": "method",
+			"id": 2147483635,
+			"codeDescriptor": {
+				"type": 1,
+				"methodName": "TEST_filter_1"
+			}
 		}
 	]
 }

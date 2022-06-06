@@ -1,9 +1,9 @@
 //%attributes = {}
 $path:=File:C1566("/RESOURCES/logo-summit.png").platformPath
 
-$path:=Folder:C1567(fk desktop folder:K87:19).file("screenshot.png").platformPath
-
 READ PICTURE FILE:C678($path; $image)
+
+CONVERT PICTURE:C1002($image; ".bmp")
 
 PICTURE PROPERTIES:C457($image; $width; $height)
 

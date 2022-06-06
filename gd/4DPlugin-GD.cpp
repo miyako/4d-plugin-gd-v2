@@ -46,17 +46,32 @@ gdImagePtr getImagePtr(PA_Picture p) {
     if(p){
     
         p = PA_DuplicatePicture(p, kcpRetainOnly);
-        PA_Variable args[2];
+        
+        //convert picture
+        PA_Variable args[3];
         args[0] = PA_CreateVariable(eVK_Picture);
-        PA_SetPictureVariable(&args[0], p);// disposed each time with PA_ClearVariable
+        PA_SetPictureVariable(&args[0], p);
+        
         args[1] = PA_CreateVariable(eVK_Unistring);
-        PA_Unistring codec = PA_CreateUnistring((PA_Unichar *)".\0p\0n\0g\0\0\0");
-        PA_SetStringVariable(&args[1], &codec);// disposed each time with PA_ClearVariable
-        PA_ExecuteCommandByID(CMD_CONVERT_PICTURE, args, 2);
-        p = PA_GetPictureVariable(args[0]); // a new picture is created
+        PA_Unistring ustr = PA_CreateUnistring((PA_Unichar *)".\0p\0n\0g\0\0\0");
+        PA_SetStringVariable(&args[1], &ustr);
+        
+        PA_ExecuteCommandByID(CONVERT_PICTURE, args, 2);
+        
+        p = PA_GetPictureVariable(args[0]); /* the picture has been converted */
+        
+        PA_SetPictureVariable(&args[0], NULL);
+        
+        PA_ClearVariable(&args[0]);
+        PA_ClearVariable(&args[1]);
+        
         PA_Handle h = PA_NewHandle(0);
+        
+        PA_ErrorCode err = eER_NoErr;
         PA_GetPictureData(p, 1, h);
-        if(PA_GetLastError() == eER_NoErr)
+        err = PA_GetLastError();
+        
+        if(err == eER_NoErr)
         {
             imagePtr = gdImageCreateFromPngPtr(PA_GetHandleSize(h), PA_LockHandle(h));
             PA_UnlockHandle(h);

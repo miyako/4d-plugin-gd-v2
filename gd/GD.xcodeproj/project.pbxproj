@@ -19,7 +19,6 @@
 		D101A17D24F7748800E79289 /* libgd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D101A17C24F7748800E79289 /* libgd.a */; };
 		D101A18324F77B8500E79289 /* libz.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D101A17E24F77B8500E79289 /* libz.a */; };
 		D101A18424F77B8500E79289 /* libjpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D101A17F24F77B8500E79289 /* libjpeg.a */; };
-		D101A18524F77B8500E79289 /* libpng16.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D101A18024F77B8500E79289 /* libpng16.a */; };
 		D101A18624F77B8500E79289 /* libtiff.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D101A18124F77B8500E79289 /* libtiff.a */; };
 		D101A18724F77B8500E79289 /* libwebp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D101A18224F77B8500E79289 /* libwebp.a */; };
 		D101A18A24F7807A00E79289 /* C_BLOB.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D101A18824F7807900E79289 /* C_BLOB.cpp */; };
@@ -31,6 +30,7 @@
 		D130064F12F02D9700702C0E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D130064E12F02D9700702C0E /* Cocoa.framework */; };
 		D13116A91A03ACB700DE1322 /* 4DPluginAPI.c in Sources */ = {isa = PBXBuildFile; fileRef = D13116A81A03ACB700DE1322 /* 4DPluginAPI.c */; settings = {COMPILER_FLAGS = "-Wno-multichar"; }; };
 		D134D4AC1A030BA0008D14EF /* manifest.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = D134D4A91A030B06008D14EF /* manifest.json */; };
+		D1FAE0DA284DC51F004DCC49 /* libpng16.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D101A18024F77B8500E79289 /* libpng16.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -83,11 +83,11 @@
 			files = (
 				D101A18324F77B8500E79289 /* libz.a in Frameworks */,
 				D101A18424F77B8500E79289 /* libjpeg.a in Frameworks */,
-				D101A18524F77B8500E79289 /* libpng16.a in Frameworks */,
 				D101A18624F77B8500E79289 /* libtiff.a in Frameworks */,
 				D101A18724F77B8500E79289 /* libwebp.a in Frameworks */,
 				D101A17D24F7748800E79289 /* libgd.a in Frameworks */,
 				D130064F12F02D9700702C0E /* Cocoa.framework in Frameworks */,
+				D1FAE0DA284DC51F004DCC49 /* libpng16.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,7 +362,7 @@
 					"$(PROJECT_DIR)/a",
 				);
 				LIBRARY_STYLE = Bundle;
-				MARKETING_VERSION = 2.2.0;
+				MARKETING_VERSION = 2.3.0;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
 				OTHER_REZFLAGS = "";
@@ -413,7 +413,7 @@
 					"$(PROJECT_DIR)/a",
 				);
 				LIBRARY_STYLE = Bundle;
-				MARKETING_VERSION = 2.2.0;
+				MARKETING_VERSION = 2.3.0;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
 				OTHER_REZFLAGS = "";
@@ -462,7 +462,7 @@
 					"$(PROJECT_DIR)/a",
 				);
 				LIBRARY_STYLE = Bundle;
-				MARKETING_VERSION = 2.2.0;
+				MARKETING_VERSION = 2.3.0;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
 				OTHER_REZFLAGS = "";

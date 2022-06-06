@@ -163,9 +163,9 @@
 	},
 	"Sources/Methods/TEST_filter_1.4dm": {
 		"left": 351,
-		"top": 333,
+		"top": 361,
 		"width": 1042,
-		"height": 590
+		"height": 562
 	},
 	"Sources/Methods/TEST_filter_all.4dm": {
 		"left": 537,
@@ -174,10 +174,10 @@
 		"height": 616
 	},
 	"Sources/Methods/TEST_rotate.4dm": {
-		"left": 627,
-		"top": 129,
-		"width": 894,
-		"height": 739
+		"left": 351,
+		"top": 333,
+		"width": 1042,
+		"height": 590
 	},
 	"Sources/Methods/TEST_animate.4dm": {
 		"left": 352,

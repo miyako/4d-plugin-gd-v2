@@ -198,13 +198,13 @@
 		"stamp": "2020-06-20T03:38:59.743Z"
 	},
 	"Sources/Methods/TEST_filter_1.4dm": {
-		"startSelection": 33,
-		"endSelection": 33,
-		"firstSelectedLine": 12,
-		"lastSelectedLine": 12,
+		"startSelection": 21,
+		"endSelection": 21,
+		"firstSelectedLine": 10,
+		"lastSelectedLine": 10,
 		"folding": [],
 		"bookmarks": [],
-		"stamp": "2020-08-27T06:47:05.112Z"
+		"stamp": "2022-03-28T12:55:06.953Z"
 	},
 	"Sources/Methods/TEST_filter_all.4dm": {
 		"startSelection": 33,
@@ -216,13 +216,13 @@
 		"stamp": "2020-08-27T05:38:57.466Z"
 	},
 	"Sources/Methods/TEST_rotate.4dm": {
-		"startSelection": 10,
-		"endSelection": 16,
-		"firstSelectedLine": 24,
-		"lastSelectedLine": 24,
+		"startSelection": 31,
+		"endSelection": 31,
+		"firstSelectedLine": 4,
+		"lastSelectedLine": 4,
 		"folding": [],
 		"bookmarks": [],
-		"stamp": "2021-11-15T04:37:37.254Z"
+		"stamp": "2022-06-06T05:05:58.304Z"
 	},
 	"Sources/Methods/TEST_animate.4dm": {
 		"startSelection": 0,
